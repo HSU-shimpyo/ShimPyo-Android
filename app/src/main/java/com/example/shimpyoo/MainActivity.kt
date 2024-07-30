@@ -1,10 +1,12 @@
 package com.example.shimpyoo
 
+import android.content.ContentValues
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.os.Bundle
 import android.os.Environment
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
@@ -12,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import java.io.File
+import java.io.FileOutputStream
 
 class MainActivity : AppCompatActivity() {
     // 녹음 파일의 저장 경로를 나타내는 변수
@@ -35,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         // output 파일 경로 초기화
         // 기기의 Music 디렉토리에 녹음 파일을 저장
         val musicDir = getExternalFilesDir(Environment.DIRECTORY_MUSIC)
-        val recordingFile = File(musicDir, "recording.mp3")
+        val recordingFile = File(musicDir, "recording.wav")
         output = recordingFile.absolutePath
 
         // findViewById를 사용하여 레이아웃 파일에서
@@ -43,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         val buttonStart: Button = findViewById(R.id.button_start)
         val buttonStop: Button = findViewById(R.id.button_stop)
         val buttonPlay: Button = findViewById(R.id.button_play)
+        val buttonDownload: Button = findViewById(R.id.button_download)
 
         // buttonStart의 클릭 리스너를 설정
         // 클릭 시, 오디오 녹음 및 저장소 쓰기 권한이 있는지 확인
@@ -73,6 +77,12 @@ class MainActivity : AppCompatActivity() {
         buttonPlay.setOnClickListener {
             startPlaying()
         }
+
+        // buttonDownload의 클릭 리스너를 설정
+        // 클릭 시 다운로드 메서드를 호출하여 녹음된 파일을 다운로드
+        buttonDownload.setOnClickListener {
+            downloadRecording()
+        }
     }
 
     private fun startRecording() {
@@ -82,8 +92,8 @@ class MainActivity : AppCompatActivity() {
             // 오디오 소스, 출력 포맷, 오디오 인코더, 출력 파일을 설정
             mediaRecorder = MediaRecorder().apply {
                 setAudioSource(MediaRecorder.AudioSource.MIC)
-                setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
-                setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
+                setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+                setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
                 setOutputFile(output)
                 setAudioEncodingBitRate(128000)
                 setAudioSamplingRate(44100)
@@ -150,6 +160,39 @@ class MainActivity : AppCompatActivity() {
                 Log.e("Playback", "Playback failed: ${e.message}")
                 Toast.makeText(this@MainActivity, "재생 오류 발생: ${e.message}", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    private fun downloadRecording() {
+        val values = ContentValues().apply {
+            put(MediaStore.Audio.Media.DISPLAY_NAME, "recording.wav")
+            put(MediaStore.Audio.Media.MIME_TYPE, "audio/wav")
+            put(MediaStore.Audio.Media.RELATIVE_PATH, Environment.DIRECTORY_MUSIC + "/MyRecordings")
+            put(MediaStore.Audio.Media.IS_PENDING, true)
+        }
+
+        val resolver = contentResolver
+        val collection = MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+        val item = resolver.insert(collection, values)
+
+        try {
+            item?.let { uri ->
+                resolver.openFileDescriptor(uri, "w", null).use { pfd ->
+                    FileOutputStream(pfd!!.fileDescriptor).use { out ->
+                        File(output).inputStream().use { input ->
+                            input.copyTo(out)
+                        }
+                    }
+                }
+                values.clear()
+                values.put(MediaStore.Audio.Media.IS_PENDING, false)
+                resolver.update(uri, values, null, null)
+                Toast.makeText(this, "다운로드 완료: $uri", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.e("Download", "Download failed: ${e.message}")
+            Toast.makeText(this, "다운로드 오류 발생: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 }
