@@ -4,8 +4,7 @@
 
     <!-- 오디오 녹음과 파일 저장을 위한 기본 권한 추가 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
-
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
     <application
         android:allowBackup="true"
