@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 투명한 배경 -->
+    <solid android:color="@color/originalBackgroundColor"/>
+
+    <!-- 모서리 둥글게 -->
+    <corners android:radius="30dp"/>
+
+    <!-- 검은색 테두리 추가 -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/Line_disabled"/>
+</shape>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/originalBackgroundColor"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="42dp"
+        android:text="저녁은 주로 언제 드시나요?"
+        android:textColor="@color/Font_02_black"
+        android:textSize="70px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <EditText
+        android:id="@+id/hours"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="84dp"
+        android:background="@drawable/transparnt_box"
+        android:elevation="0.5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:text="00"
+        android:textColor="@color/timeTextColor"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <EditText
+        android:id="@+id/minutes"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/transparnt_box"
+        android:elevation="0.5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:text="00"
+        android:textColor="@color/timeTextColor"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hours"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="140dp"
+        android:layout_height="22dp"
+        android:text="해당사항 없음"
+        android:textColor="#505050"
+        android:textSize="15sp"
+        android:buttonTint="#3c63ec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minutes"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:background="@drawable/blue_button"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
