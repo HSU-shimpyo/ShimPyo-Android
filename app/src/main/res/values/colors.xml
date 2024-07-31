@@ -2,9 +2,11 @@
 <resources>
     <color name="originalBackgroundColor">#f7f7fb</color> <!-- 기본 배경색 -->
     <color name="originalBorderColor">#91a6f3</color> <!-- 기본 테두리색 -->
-    <color name="originalTextColor">#111111</color> <!-- 기본 텍스트색 -->
+    <color name="Font_02_black">#111111</color> <!-- 기본 텍스트색 -->
     <color name="notSelectedBoxColor">#E5E5EC</color>
-    <color name="notSelectedTextColor">#767676</color>
+    <color name="Font_04_Gray">#767676</color>
     <color name="selectedBoxColor">#E5E9FA</color>
-    <color name="selectedTextColor">#3c63ec</color>
+    <color name="mainBlue">#3c63ec</color>
+    <color name="timeTextColor">#999999</color>
+    <color name="Line_disabled">#cacad7</color>
 </resources>

@@ -36,36 +36,21 @@
             android:text="약 알림 설정"
             android:textSize="50px"
             android:textStyle="bold"
-            android:textColor="@color/originalTextColor">
+            android:textColor="@color/Font_02_black">
         </TextView>
 
     </androidx.appcompat.widget.Toolbar>
-
-    <Button
-        android:id="@+id/settingButton"
-        android:layout_width="320dp"
-        android:layout_height="52dp"
-        android:background="@drawable/blue_button"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="text"
-        android:text="재설정 하기"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.93" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintBottom_toTopOf="@+id/settingButton"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.5"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
