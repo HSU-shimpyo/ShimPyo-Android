@@ -22,6 +22,7 @@
             android:id="@+id/arrowLeftButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/originalBackgroundColor"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             app:srcCompat="@drawable/arrow_left"
