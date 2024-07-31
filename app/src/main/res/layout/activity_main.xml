@@ -265,6 +265,7 @@
                 android:textColor="#111111"/>
 
             <ImageView
+                android:id="@+id/hospitalSettingButton"
                 android:layout_width="16.75dp"
                 android:layout_height="16dp"
                 android:layout_gravity="center"
