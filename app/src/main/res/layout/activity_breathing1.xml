@@ -46,11 +46,11 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- 추가할 LinearLayout -->
     <LinearLayout
-        android:layout_width="371dp"
+        android:layout_width="360dp"
         android:layout_height="570dp"
         android:layout_gravity="center"
+        android:layout_marginTop="63dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp"
@@ -72,23 +72,14 @@
                 android:layout_marginTop="28dp"
                 android:src="@drawable/logo_ver2" />
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="46dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="0"
-                android:progressDrawable="@drawable/circular_progress_bar" />
-        </FrameLayout>
+            <ImageView
+                android:layout_width="295dp"
+                android:layout_height="341dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="64dp"
+                android:src="@drawable/progressbar_ver1" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="562dp"
-            android:layout_weight="1"
-            android:gravity="center"></FrameLayout>
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -126,6 +117,7 @@
             android:layout_margin="23dp"
             android:text="후! 불어주세요"
             android:textAlignment="center"
+            android:textAppearance="@style/some_id"
             android:textColor="#111111"
             android:textSize="30sp" />
 
@@ -133,8 +125,9 @@
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_margin="23dp"
-            android:text="마이크와의 거리를 적당히 유지해주세요"
+            android:text=" 마이크와의 거리를 적당히 유지해주세요"
             android:textAlignment="center"
+            android:textAppearance="@style/some_id"
             android:textColor="#767676"
             android:textSize="14sp" />
     </LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/originalBackgroundColor"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/originalBackgroundColor"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="오늘의 쉼 지표"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/Font_02_black"/>
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:background="@color/originalBackgroundColor"
+                app:srcCompat="@drawable/close_button" />
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="371dp"
+        android:layout_height="570dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="63dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/logo_ver2" />
+
+            <ImageView
+                android:layout_width="295dp"
+                android:layout_height="341dp"
+                android:layout_marginTop="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/progressbar_ver3" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currentStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="#3776CB"
+                android:textSize="40sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:text="/3"
+                android:textAlignment="center"
+                android:textColor="#767676"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/instructionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="23dp"
+            android:text="마지막으로 한 번 더!"
+            android:textAppearance="@style/some_id"
+            android:textAlignment="center"
+            android:textColor="#111111"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_margin="23dp"
+            android:text=" 마이크와의 거리를 적당히 유지해주세요"
+            android:textAppearance="@style/some_id"
+            android:textAlignment="center"
+            android:textColor="#767676"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
