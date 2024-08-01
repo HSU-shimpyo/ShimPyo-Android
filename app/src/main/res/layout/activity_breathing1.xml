@@ -66,6 +66,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/breathingBtn"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_gravity="center"

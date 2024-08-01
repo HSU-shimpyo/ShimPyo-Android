@@ -22,6 +22,8 @@
         <activity android:name=".settings.hospital.HospitalScheduleActivity"/>
         <activity android:name=".settings.notification.NotificationActivity"/>
         <activity android:name=".settings.breathing.BreathingActivity"/>
+        <activity android:name=".settings.breathing.BreathingActivity2"/>
+        <activity android:name=".settings.breathing.BreathingActivity3"/>
     </application>
 
 </manifest>
