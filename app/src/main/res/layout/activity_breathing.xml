@@ -38,9 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center_vertical"
-                android:background="@color/originalBackgroundColor"
                 android:layout_marginEnd="16dp"
-                app:srcCompat="@drawable/close_button"/>
+                android:background="@color/originalBackgroundColor"
+                app:srcCompat="@drawable/close_button" />
 
         </FrameLayout>
 
@@ -77,7 +77,7 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="46dp"
                 android:indeterminate="false"
                 android:max="100"
                 android:progress="0"

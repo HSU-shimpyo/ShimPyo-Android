@@ -6,6 +6,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.shimpyoo.settings.breathing.BreathingActivity
 import com.example.shimpyoo.settings.hospital.HospitalScheduleActivity
 import com.example.shimpyoo.settings.notification.NotificationActivity
 
@@ -24,6 +25,12 @@ class MainActivity : AppCompatActivity() {
         val hospitalSettingButton: ImageView = findViewById(R.id.hospitalSettingButton)
         hospitalSettingButton.setOnClickListener {
             val intent = Intent(this, HospitalScheduleActivity::class.java)
+            startActivity(intent)
+        }
+
+        val breathingBtn: ImageView = findViewById(R.id.breathingBtn)
+        breathingBtn.setOnClickListener {
+            val intent = Intent(this, BreathingActivity::class.java)
             startActivity(intent)
         }
     }
