@@ -2,9 +2,11 @@ package com.example.shimpyoo
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.shimpyoo.settings.hospital.HospitalScheduleActivity
 import com.example.shimpyoo.settings.notification.NotificationActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         val notificationSettingBtn: ImageView = findViewById(R.id.medicineSettingButton)
         notificationSettingBtn.setOnClickListener {
             val intent = Intent(applicationContext, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+
+        val hospitalSettingButton: ImageView = findViewById(R.id.hospitalSettingButton)
+        hospitalSettingButton.setOnClickListener {
+            val intent = Intent(this, HospitalScheduleActivity::class.java)
             startActivity(intent)
         }
     }
