@@ -8,7 +8,7 @@ import com.example.shimpyoo.R
 class HospitalScheduleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hospital_calendar)
+        setContentView(R.layout.activity_hospitalsetting)
 
         val closeButton: ImageView = findViewById(R.id.closeButton)
         closeButton.setOnClickListener {
