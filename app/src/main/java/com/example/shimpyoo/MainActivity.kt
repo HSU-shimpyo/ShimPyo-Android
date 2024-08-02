@@ -7,7 +7,6 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.shimpyoo.settings.breathing.BreathingActivity
-import com.example.shimpyoo.settings.breathing.BreathingActivity2
 import com.example.shimpyoo.settings.hospital.HospitalScheduleActivity
 import com.example.shimpyoo.settings.notification.NotificationActivity
 
