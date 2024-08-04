@@ -9,4 +9,6 @@
     <color name="mainBlue">#3c63ec</color>
     <color name="timeTextColor">#999999</color>
     <color name="Line_disabled">#cacad7</color>
+    <color name="font_white">#ffffff</color>
+    <color name="system_button_500">#4896ec</color>
 </resources>

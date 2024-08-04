@@ -25,8 +25,7 @@ class NotificationActivity : AppCompatActivity(), OnFragmentInteractionListener 
 
         val backBtn: ImageButton = findViewById(R.id.arrowLeftButton)
         backBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish() // 이전 화면으로 돌아가기
         }
     }
 }
