@@ -29,17 +29,17 @@
 
             <ImageView
                 android:id="@+id/breathingBtn"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="28dp"
                 android:src="@drawable/logo_ver2" />
 
             <ImageView
-                android:layout_width="295dp"
-                android:layout_height="341dp"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="28dp"
                 android:src="@drawable/progressbar_ver3" />
 
         </FrameLayout>
