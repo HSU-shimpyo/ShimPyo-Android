@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -26,12 +28,16 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        dataBinding = true
     }
 }
 

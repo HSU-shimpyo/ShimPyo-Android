@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- 바인딩할 변수들 추가 가능 -->
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/week_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#3C63EC"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textAlignment="center"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19"
+                android:textColor="#111111"
+                android:textAlignment="center"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
