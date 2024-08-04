@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Base application theme. -->
     <style name="Base.Theme.ShimPyoo" parent="Theme.AppCompat">
         <!-- Customize your light theme here. -->
@@ -15,6 +15,8 @@
         <item name="android:unfocusedMonthDateColor">@android:color/holo_blue_light</item>
         <item name="android:weekDayTextAppearance">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:dateTextAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="colorSurface">@color/system_button_500</item> <!-- 추가된 부분 -->
+
     </style>
 
     <!-- 달력에 사용하는 스타일 -->
