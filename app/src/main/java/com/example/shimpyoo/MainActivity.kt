@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.shimpyoo.settings.breathing.BreathingActivity
 import com.example.shimpyoo.settings.hospital.HospitalScheduleActivity
 import com.example.shimpyoo.settings.notification.NotificationActivity
+import com.example.shimpyoo.settings.weeklycalendar.WeeklyCalendarFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +33,13 @@ class MainActivity : AppCompatActivity() {
         breathingBtn.setOnClickListener {
             val intent = Intent(this, BreathingActivity::class.java)
             startActivity(intent)
+        }
+
+        // WeeklyCalendarFragment를 추가
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.calendar_fragment_container, WeeklyCalendarFragment.newInstance())
+                .commitNow()
         }
     }
 }

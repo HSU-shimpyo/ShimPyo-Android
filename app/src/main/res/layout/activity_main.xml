@@ -11,77 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="520dp">
 
-        <!-- 캘린더 섹션 -->
-        <LinearLayout
+        <View
             android:layout_width="match_parent"
-            android:layout_height="236dp"
-            android:background="@drawable/rounded_background_blue"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="일"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="월"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="화"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="수"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="목"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="금"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="토"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-        </LinearLayout>
+            android:layout_height="50dp"
+            android:background="#3C63EC" />
 
         <!-- 중앙 섹션 -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/calendar_fragment_container"
+            android:name="com.example.shimpyoo.settings.weeklycalendar.WeeklyCalendarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_background_blue"
+            />
+
         <LinearLayout
             android:layout_width="371dp"
             android:layout_height="342dp"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="75dp"
             android:background="@drawable/rounded_background_white"
             android:gravity="center"
             android:orientation="vertical"
@@ -125,7 +74,6 @@
 
         <LinearLayout
             android:layout_width="161dp"
-
             android:layout_height="141dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
@@ -217,15 +165,13 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:orientation="horizontal"
-            android:layout_marginBottom="12dp"
->
+            android:layout_marginBottom="12dp">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
-
                 android:background="@drawable/pill" />
 
             <TextView
